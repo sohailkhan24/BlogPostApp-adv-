@@ -31,7 +31,7 @@ body {
   .social_icon span {
     font-size: 60px;
     margin-left: 10px;
-    color: #7ed2f3; }
+    color: #ffc312; }
     .social_icon span:hover {
       color: white;
       cursor: pointer; }
@@ -41,7 +41,7 @@ body {
 
 .input-group-prepend span {
   width: 50px;
-  background-color: #7ed2f3;
+  background-color: #ffc312;
   color: black;
   border: 0 !important; }
 

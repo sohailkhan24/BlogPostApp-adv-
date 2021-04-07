@@ -7,6 +7,8 @@ const db = require("./config/mongoose");
 //used for session cookie
 const session = require("express-session");
 
+const passportGoogle = require("./config/passport-google-oauth2-strategy");
+const passportGithub = require("./config/passport-github-oauth-strategy");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const MongoStore = require("connect-mongo")(session);
