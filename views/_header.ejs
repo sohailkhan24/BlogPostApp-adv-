@@ -1,63 +1,53 @@
 <!-- <header>Page Header</header> -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <%if(locals.user){%>
-    <a class="navbar-brand mb-2 mb-lg-0" href="/users/profile"
-      ><%= user.name%></a
-    >
-    <%}else{%>
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-    <%}%>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <%if(locals.user){%>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+<nav class="navbar navbar-expand-lg navStyle">
+  <%if(locals.user){%>
+  <a
+    class="navbar-brand mb-2 mb-lg-0"
+    style="color: black"
+    href="/users/profile/<%=u.id%>"
+    ><%= user.name%></a
+  >
+  <%}else{%>
+  <a class="navbar-brand" href="/">Blogs</a>
+  <%}%>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+    <span><i class="fas fa-align-right iconStyle"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mainMenu">
+    <ul class="navbar-nav ml-auto navList">
+      <%if(locals.user){%>
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home<i class="fas fa-home"></i></a>
+      </li>
+      <li class="nav-item">
+        <a href="/posts/newBlog" class="nav-link"
+          >Create-New<i class="fas fa-file-alt"></i
+        ></a>
+      </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Create-New</a>
-        </li>
-        <!-- </ul> -->
-        <!-- <form class="d-flex navbar-nav me-5 mb-2 mb-lg-0">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-        <!-- <ul class="navbar-nav"> -->
-        <li class="nav-item d-flex">
-          <a class="nav-link active" href="/users/sign-out">Sign-Out</a>
-        </li>
-      </ul>
+      <li class="nav-item">
+        <a href="/users/profile/<%=u.id%>" class="nav-link"
+          >Profile<i class="fas fa-address-card"></i
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a href="/users/sign-out" class="nav-link"
+          >Sign-out<i class="fas fa-sign-out-alt"></i
+        ></a>
+      </li>
+
       <%}else{%>
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/users/sign-in"
-          >Sign-In</a
-        >
+        <a href="/users/sign-in" class="nav-link"
+          >Sign-in<i class="fas fa-sign-in-alt"></i
+        ></a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/users/sign-up"
-          >Sign-Up</a
-        >
+        <a href="/users/sign-up" class="nav-link">
+          Sign-up<i class="fas fa-user-plus"></i
+        ></a>
       </li>
-
-      <%}%>
-    </div>
+    </ul>
+    <%}%>
   </div>
 </nav>

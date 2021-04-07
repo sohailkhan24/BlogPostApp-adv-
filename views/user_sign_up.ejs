@@ -1,13 +1,87 @@
-<h1>Codeial / <%= title %></h1>
-<form action="/users/create" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <input
-    type="password"
-    name="confirm_password"
-    placeholder="Confirm Password"
-    required
-  />
-  <input type="submit" value="Sign Up" />
-</form>
+<div class="container-fluid p-0">
+  <div
+    class="d-flex justify-content-center h-100"
+    style="
+      background-image: url('https://getwallpapers.com/wallpaper/full/9/a/2/1523452-hd-wallpaper-1440x900-2560x1600-hd-for-mobile.jpg');
+    "
+  >
+    <div class="card">
+      <div class="card-header">
+        <h3>Sign Up</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-github"></i></span>
+          <span><i class="fab fa-google"></i></span>
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form action="/users/create" method="POST">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+
+            <input
+              type="name"
+              class="form-control"
+              name="name"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-at"></i></span>
+            </div>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input
+              class="form-control"
+              type="password"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="submit"
+              value="Signup"
+              class="btn float-right login_btn"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Already have an account?<a
+            href="/users/sign-in"
+            style="color: chartreuse; text-decoration: none"
+            >Sign In</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

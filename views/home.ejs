@@ -1,46 +1,30 @@
-<h1>Codeial / <%= title %></h1>
+<div
+  class="container-fluid "
+  style="height: 86%; overflow-y: scroll; background-color: #031c2b;
+  "
+>
+  <div class="row text-light">
+    <div class="col-sm-8" id="feed-posts">
+      <div class="m-3 font-italic"><h2>Explore Some Titles...</h2></div>
+      <div
+        id="posts-list-container "
+        class="d-flex justify-content-center"
+        style="width: 80%"
+      >
+        <ul>
+          <% for(post of posts){ %> <%-include('_post')-%> <%} %>
+        </ul>
+      </div>
+    </div>
 
-<section id="feed-posts">
-  <h4>Posts</h4>
-  <div id="posts-list-container">
-    <ul>
-      <% for(post of posts){ %> <%-include('_post')-%> <%} %>
-    </ul>
+    <div class="col-sm-4 border-left border-info"" id="users-posts ">
+      <h4>Users</h4>
+      <br />
+      <% for(u of all_users){%>
+      <p style="text-decoration: none">
+        <a href="/users/profile/<%=u.id%>"><%=u.name%></a>
+      </p>
+      <%}%>
+    </div>
   </div>
-  <% if(locals.user){ %>
-  <form action="/posts/create" id="new-post-form" method="POST">
-    <input type="text" name="title" placeholder="Title" required />
-    <select name="category" required>
-      <option selected disabled value="">Choose From the Following</option>
-      <option>DIY</option>
-      <option>Fashion</option>
-      <option>Finance</option>
-      <option>Fitness</option>
-      <option>Food</option>
-      <option>Lifestyle</option>
-      <option>Music</option>
-      <option>Parenting</option>
-      <option>Personal</option>
-      <option>Politics</option>
-      <option>Sports</option>
-      <option>Technology</option>
-      <option>Travel</option>
-    </select>
-    <textarea
-      name="content"
-      cols="30"
-      rows="3"
-      placeholder="Type Here..."
-      required
-    ></textarea>
-    <input type="submit" value="Post" />
-  </form>
-  <% } %>
-</section>
-
-<section>
-  <h4>Friends</h4>
-  <% for(u of all_users){%>
-  <p><a href="/users/profile/<%=u.id%>"><%=u.name%></a></p>
-  <%}%>
-</section>
+</div>

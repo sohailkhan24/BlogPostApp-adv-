@@ -1,0 +1,77 @@
+// #layout-header {
+//   nav {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 0 10px;
+//     background: #2196f3;
+//     color: white;
+//     box-shadow: 1px 1px 1px 1px lightgrey;
+
+//     .mini-logo {
+//       p {
+//         margin: 5px;
+//         font-size: 1.4rem;
+//         font-weight: bold;
+//       }
+//     }
+
+//     .auth-links {
+//       ul {
+//         margin: 5% 5px;
+//         display: flex;
+//         list-style: none;
+//         li {
+//           margin-right: 10px;
+//         }
+//       }
+//     }
+
+//     a {
+//       color: white;
+//       text-decoration: none;
+//     }
+//   }
+// }
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.navbar {
+  background-color: rgba(178, 190, 204, 0.472);
+  .brand-navbar {
+    a {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  ul {
+    padding: 0px 30px 0px 0px;
+    li {
+      a {
+        color: rgb(27, 25, 25);
+        margin: 10px 0px 0px 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+        .fas {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+        &:hover {
+          color: #15b000;
+        }
+      }
+    }
+    li.active {
+      > a {
+        color: #15b000;
+        font-weight: bold;
+        font-size: 12px;
+        border-left: 3px solid #15b000;
+        border-radius: 40px;
+      }
+    }
+  }
+}
+.iconStyle {
+  color: #15b000;
+}
