@@ -1,0 +1,85 @@
+<style>
+  body {
+    background-image: url("https://getwallpapers.com/wallpaper/full/1/8/2/74758.jpg");
+  }
+</style>
+<% if(locals.user){ %>
+<div class="container-fluid p-5 mt-5 mb-4 col-sm-6 border border-info">
+  <form
+    class="shake"
+    role="form"
+    action="/posts/create"
+    method="post"
+    id="contactForm"
+    name="contact-form"
+    data-toggle="validator"
+  >
+    <div class="form-group label-floating m-10">
+      <label class="control-label text-dark" for="title"><h6>Title</h6></label
+      ><br />
+
+      <input
+        placeholder="<%=post.title%>"
+        class="form-control"
+        id="name"
+        type="text"
+        name="title"
+        required
+        data-error="Please the title of your blog"
+      />
+      <div class="help-block with-errors"></div>
+    </div>
+    <div class="form-group label-floating">
+      <label class="control-label text-dark"><h6>Category</h6></label><br />
+      <select name="category" class="form-control" id="msg_subject" required>
+        <option selected disabled value="">Choose From the Following</option>
+        <option>DIY</option>
+        <option>Fashion</option>
+        <option>Finance</option>
+        <option>Fitness</option>
+        <option>Food</option>
+        <option>Lifestyle</option>
+        <option>Music</option>
+        <option>Parenting</option>
+        <option>Personal</option>
+        <option>Politics</option>
+        <option>Sports</option>
+        <option>Technology</option>
+        <option>Travel</option>
+      </select>
+
+      <div class="help-block with-errors"></div>
+    </div>
+    <!-- Message -->
+    <div class="form-group label-floating">
+      <label for="message" class="control-label text-dark"
+        ><h6>Content</h6></label
+      ><br />
+      <textarea
+        placeholder="Write Your Blog here ......"
+        class="form-control"
+        rows="6"
+        id="message"
+        name="content"
+        required
+        data-error="Write your Blog"
+      ></textarea>
+      <div class="help-block with-errors"></div>
+    </div>
+    <!-- Form Submit -->
+    <div class="form-submit mt-5">
+      <button
+        class="btn btn-common"
+        type="submit"
+        value="Post"
+        id="form-submit"
+      >
+        <i class="material-icons mdi mdi-message-outline"></i> Send Message
+      </button>
+      <div id="msgSubmit" class="h3 text-center hidden"></div>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>
+
+<% } %>

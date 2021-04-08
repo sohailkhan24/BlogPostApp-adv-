@@ -1,0 +1,18 @@
+<ul>
+    <% for(let i of posts){ %> 
+        <li>
+      <p>
+        <div class="p-1 font-italic "><h6><%= post.title %></h6></div>
+        <br />
+        <p><%= post.category %></p>
+        <p><%= post.content %></p>
+        <small> Created by-<%= post.user.name %> </small><br />
+        <small>Created At- <%= post.user.updatedAt %> </small><br />
+        
+      </p>
+      
+    </li>
+        
+        <%} %>
+
+</ul>
